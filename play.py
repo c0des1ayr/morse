@@ -66,7 +66,7 @@ def boolArrToSwitchedTone(boolArr, freq, sps, volume=1.0):
   smoothingWeights = np.concatenate((np.arange(1, weightLen//2+1), np.arange(weightLen//2+1, 0, -1)))
   smoothingWeights = smoothingWeights / np.sum(smoothingWeights)
   numSamplesPadding = int(sps*AUDIO_PADDING) + int((weightLen-1)/2)
-  padding = np.zeros(numSamplesPadding, dtype=np.bool)
+  padding = np.zeros(numSamplesPadding, dtype=np.bool_)
   boolArr = np.concatenate((padding, boolArr, padding)).astype(np.float32)
   if CLICK_SMOOTH <= 0:
     smoothBoolArr = boolArr

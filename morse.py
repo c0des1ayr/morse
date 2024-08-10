@@ -26,11 +26,11 @@ def morseSampleDuration(code, sps, wpm, fs=None):
   samplesBetweenLetters = int(round(baseSampleCount * CHAR_SPACE * farnsworthScale))
   samplesBetweenWords = int(round(baseSampleCount * WORD_SPACE * farnsworthScale))
 
-  dotArr = np.ones(samplesPerDot, dtype=np.bool)
-  dashArr = np.ones(samplesPerDash, dtype=np.bool)
-  eGapArr = np.zeros(samplesBetweenElements, dtype=np.bool)
-  cGapArr = np.zeros(samplesBetweenLetters, dtype=np.bool)
-  wGapArr = np.zeros(samplesBetweenWords, dtype=np.bool)
+  dotArr = np.ones(samplesPerDot, dtype=np.bool_)
+  dashArr = np.ones(samplesPerDash, dtype=np.bool_)
+  eGapArr = np.zeros(samplesBetweenElements, dtype=np.bool_)
+  cGapArr = np.zeros(samplesBetweenLetters, dtype=np.bool_)
+  wGapArr = np.zeros(samplesBetweenWords, dtype=np.bool_)
 
   duration = 0
   prevSpaces = 0
@@ -64,11 +64,11 @@ def morseToBoolArr(code, sps, wpm, fs=None):
   samplesBetweenLetters = int(round(baseSampleCount * CHAR_SPACE * farnsworthScale))
   samplesBetweenWords = int(round(baseSampleCount * WORD_SPACE * farnsworthScale))
 
-  dotArr = np.ones(samplesPerDot, dtype=np.bool)
-  dashArr = np.ones(samplesPerDash, dtype=np.bool)
-  eGapArr = np.zeros(samplesBetweenElements, dtype=np.bool)
-  cGapArr = np.zeros(samplesBetweenLetters, dtype=np.bool)
-  wGapArr = np.zeros(samplesBetweenWords, dtype=np.bool)
+  dotArr = np.ones(samplesPerDot, dtype=np.bool_)
+  dashArr = np.ones(samplesPerDash, dtype=np.bool_)
+  eGapArr = np.zeros(samplesBetweenElements, dtype=np.bool_)
+  cGapArr = np.zeros(samplesBetweenLetters, dtype=np.bool_)
+  wGapArr = np.zeros(samplesBetweenWords, dtype=np.bool_)
 
   pieces = []
   prevWasSpace = False
